@@ -1,53 +1,59 @@
-<?= view('templates/header') ?>
+﻿<?= $this->extend('layouts/elegance') ?>
+<?= $this->section('content') ?>
+<div class="container mb-5">
+    <div class="text-center mb-5">
+        <h2 style="font-family:'Playfair Display',serif; color:var(--el-black);">Votre Bilan Nutritionnel</h2>
+        <div style="width: 50px; height: 2px; background-color: var(--el-gold); margin: 10px auto;"></div>
+        <p class="text-muted">Découvrez le programme sur-mesure adapté à votre organisme.</p>
+    </div>
 
-<div class="chic-card">
-    <h2 style="text-align: center; color: var(--accent); margin-bottom: 50px;">Votre Profil & Recommandation</h2>
-    
-    <form action="/recommandation/calculer" method="POST">
-        <?= csrf_field() ?>
-        <div class="row" style="display: flex; gap: 30px;">
-            <div class="col" style="flex: 1;">
-                <div class="form-group">
-                    <label for="genre">Genre</label>
-                    <select name="genre" id="genre" class="form-control" required>
-                        <option value="" disabled selected>Sélectionnez...</option>
-                        <option value="homme">Homme</option>
-                        <option value="femme">Femme</option>
-                    </select>
-                </div>
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card border-0 shadow-sm rounded-0 p-5" style="background:#fff;">
+                <form action="<?= base_url('recommandation/calculer') ?>" method="POST">
+                    <?= csrf_field() ?>
+                    
+                    <h5 class="text-uppercase mb-4" style="font-size:0.9rem; letter-spacing:1px; color:var(--el-gold-dark);">Données Biométriques</h5>
+                    
+                    <div class="row mb-4">
+                        <div class="col-md-6 mb-3 mb-md-0">
+                            <label class="form-label small text-muted text-uppercase">Taille (en cm) *</label>
+                            <input type="number" name="taille" class="form-control rounded-0 border-dark py-2" required placeholder="Ex: 175" min="100" max="250">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label small text-muted text-uppercase">Poids (en kg) *</label>
+                            <input type="number" step="0.1" name="poids" class="form-control rounded-0 border-dark py-2" required placeholder="Ex: 70.5" min="30" max="300">
+                        </div>
+                    </div>
+
+                    <div class="row mb-5">
+                        <div class="col-md-6 mb-3 mb-md-0">
+                            <label class="form-label small text-muted text-uppercase">Genre</label>
+                            <select name="genre" class="form-select rounded-0 border-dark py-2">
+                                <option value="homme">Homme</option>
+                                <option value="femme">Femme</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label small text-muted text-uppercase">Objectif Principal *</label>
+                            <select name="objectif" class="form-select rounded-0 border-dark py-2" required>
+                                <option value="perte_poids">Réduire le poids</option>
+                                <option value="prise_masse">Augmenter la masse musculaire</option>
+                                <option value="maintien">Maintien & Équilibre (IMC idéal)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-elegant py-3 px-5 text-uppercase w-100" style="letter-spacing: 1px; font-size: 0.9rem;">
+                            Obtenir mon algorithme personnalisé
+                        </button>
+                    </div>
+
+                </form>
             </div>
         </div>
-
-        <div class="row" style="display: flex; gap: 30px;">
-            <div class="col" style="flex: 1;">
-                <div class="form-group">
-                    <label for="taille">Taille (cm)</label>
-                    <input type="number" name="taille" id="taille" class="form-control" placeholder="170" required min="100" max="250">
-                </div>
-            </div>
-            <div class="col" style="flex: 1;">
-                <div class="form-group">
-                    <label for="poids">Poids (kg)</label>
-                    <!-- Dans la table schema.sql `measurements` => `weight_kg` -->
-                    <input type="number" name="poids" id="poids" step="0.1" class="form-control" placeholder="65.5" required min="30" max="300">
-                </div>
-            </div>
-        </div>
-
-        <div class="form-group" style="margin-top: 20px;">
-            <label for="objectif">Votre Objectif de Régime</label>
-            <select name="objectif" id="objectif" class="form-control" required>
-                <option value="" disabled selected>Que souhaitez-vous accomplir ?</option>
-                <option value="perte">Réduire le poids</option>
-                <option value="gain">Augmenter le poids</option>
-                <option value="imc_ideal">Atteindre / Conserver l'IMC idéal</option>
-            </select>
-        </div>
-
-        <div style="text-align: center; margin-top: 40px;">
-            <button type="submit" class="btn-chic">Obtenir mon programme personnalisé</button>
-        </div>
-    </form>
+    </div>
 </div>
-
-<?= view('templates/footer') ?>
+<?= $this->endSection() ?>

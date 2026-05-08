@@ -1,0 +1,228 @@
+CRITICAL - 2026-05-08 06:34:46 --> ErrorException: require_once(/home/sanda/Documents/S4/tri/PROJET_S4/../includes/fonctions.php): Failed to open stream: No such file or directory
+[Method: GET, Route: regimes]
+in APPPATH/Controllers/RegimeController.php on line 12.
+ 1 APPPATH/Controllers/RegimeController.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/RegimeController.php(12): require_once()
+ 3 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\RegimeController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/home/sanda/Documents/S4/tri/PROJET_S4/public/index.php')
+CRITICAL - 2026-05-08 06:50:00 --> ErrorException: Undefined property: Config\Database::$hostname
+[Method: GET, Route: regimes]
+in ROOTPATH/includes/fonctions.php on line 11.
+ 1 ROOTPATH/includes/fonctions.php(11): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 ROOTPATH/includes/fonctions.php(27): getDBConnection()
+ 3 APPPATH/Controllers/RegimeController.php(14): getAllRegimes()
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\RegimeController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/sanda/Documents/S4/tri/PROJET_S4/public/index.php')
+CRITICAL - 2026-05-08 07:06:32 --> ErrorException: require_once(/home/sanda/Documents/S4/tri/PROJET_S4/app/../../includes/fonctions.php): Failed to open stream: No such file or directory
+[Method: GET, Route: regimes]
+in APPPATH/Controllers/RegimeController.php on line 12.
+ 1 APPPATH/Controllers/RegimeController.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/RegimeController.php(12): require_once()
+ 3 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\RegimeController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/home/sanda/Documents/S4/tri/PROJET_S4/public/index.php')
+CRITICAL - 2026-05-08 07:09:03 --> ErrorException: require_once(/home/sanda/Documents/S4/tri/PROJET_S4/../includes/fonctions.php): Failed to open stream: No such file or directory
+[Method: GET, Route: regimes]
+in APPPATH/Controllers/RegimeController.php on line 12.
+ 1 APPPATH/Controllers/RegimeController.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/RegimeController.php(12): require_once()
+ 3 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\RegimeController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/home/sanda/Documents/S4/tri/PROJET_S4/public/index.php')
+CRITICAL - 2026-05-08 07:13:17 --> ErrorException: require_once(/home/sanda/Documents/S4/tri/PROJET_S4/../includes/fonctions.php): Failed to open stream: No such file or directory
+[Method: GET, Route: regimes]
+in APPPATH/Controllers/RegimeController.php on line 12.
+ 1 APPPATH/Controllers/RegimeController.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/RegimeController.php(12): require_once()
+ 3 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\RegimeController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/home/sanda/Documents/S4/tri/PROJET_S4/public/index.php')
+CRITICAL - 2026-05-08 07:13:18 --> ErrorException: require_once(/home/sanda/Documents/S4/tri/PROJET_S4/../includes/fonctions.php): Failed to open stream: No such file or directory
+[Method: GET, Route: regimes]
+in APPPATH/Controllers/RegimeController.php on line 12.
+ 1 APPPATH/Controllers/RegimeController.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/RegimeController.php(12): require_once()
+ 3 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\RegimeController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/home/sanda/Documents/S4/tri/PROJET_S4/public/index.php')
+CRITICAL - 2026-05-08 07:13:18 --> ErrorException: require_once(/home/sanda/Documents/S4/tri/PROJET_S4/../includes/fonctions.php): Failed to open stream: No such file or directory
+[Method: GET, Route: regimes]
+in APPPATH/Controllers/RegimeController.php on line 12.
+ 1 APPPATH/Controllers/RegimeController.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/RegimeController.php(12): require_once()
+ 3 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\RegimeController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/home/sanda/Documents/S4/tri/PROJET_S4/public/index.php')
+CRITICAL - 2026-05-08 07:13:19 --> ErrorException: require_once(/home/sanda/Documents/S4/tri/PROJET_S4/../includes/fonctions.php): Failed to open stream: No such file or directory
+[Method: GET, Route: regimes]
+in APPPATH/Controllers/RegimeController.php on line 12.
+ 1 APPPATH/Controllers/RegimeController.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/RegimeController.php(12): require_once()
+ 3 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\RegimeController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/home/sanda/Documents/S4/tri/PROJET_S4/public/index.php')
+CRITICAL - 2026-05-08 07:13:19 --> ErrorException: require_once(/home/sanda/Documents/S4/tri/PROJET_S4/../includes/fonctions.php): Failed to open stream: No such file or directory
+[Method: GET, Route: regimes]
+in APPPATH/Controllers/RegimeController.php on line 12.
+ 1 APPPATH/Controllers/RegimeController.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/RegimeController.php(12): require_once()
+ 3 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\RegimeController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/home/sanda/Documents/S4/tri/PROJET_S4/public/index.php')
+CRITICAL - 2026-05-08 07:13:19 --> ErrorException: require_once(/home/sanda/Documents/S4/tri/PROJET_S4/../includes/fonctions.php): Failed to open stream: No such file or directory
+[Method: GET, Route: regimes]
+in APPPATH/Controllers/RegimeController.php on line 12.
+ 1 APPPATH/Controllers/RegimeController.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/RegimeController.php(12): require_once()
+ 3 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\RegimeController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/home/sanda/Documents/S4/tri/PROJET_S4/public/index.php')
+CRITICAL - 2026-05-08 07:13:19 --> ErrorException: require_once(/home/sanda/Documents/S4/tri/PROJET_S4/../includes/fonctions.php): Failed to open stream: No such file or directory
+[Method: GET, Route: regimes]
+in APPPATH/Controllers/RegimeController.php on line 12.
+ 1 APPPATH/Controllers/RegimeController.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/RegimeController.php(12): require_once()
+ 3 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\RegimeController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/home/sanda/Documents/S4/tri/PROJET_S4/public/index.php')
+CRITICAL - 2026-05-08 07:13:19 --> ErrorException: require_once(/home/sanda/Documents/S4/tri/PROJET_S4/../includes/fonctions.php): Failed to open stream: No such file or directory
+[Method: GET, Route: regimes]
+in APPPATH/Controllers/RegimeController.php on line 12.
+ 1 APPPATH/Controllers/RegimeController.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/RegimeController.php(12): require_once()
+ 3 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\RegimeController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/home/sanda/Documents/S4/tri/PROJET_S4/public/index.php')
+CRITICAL - 2026-05-08 07:27:09 --> ErrorException: require_once(/home/sanda/Documents/S4/tri/PROJET_S4/../includes/fonctions.php): Failed to open stream: No such file or directory
+[Method: GET, Route: regimes]
+in APPPATH/Controllers/RegimeController.php on line 12.
+ 1 APPPATH/Controllers/RegimeController.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/RegimeController.php(12): require_once()
+ 3 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\RegimeController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/home/sanda/Documents/S4/tri/PROJET_S4/public/index.php')
+CRITICAL - 2026-05-08 08:30:45 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "regimes/list.php"
+[Method: GET, Route: regimes]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/RegimeController.php(23): view()
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\RegimeController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/sanda/Documents/S4/tri/PROJET_S4/public/index.php')
+CRITICAL - 2026-05-08 10:19:33 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "recommandation/form.php"
+[Method: GET, Route: recommandations/form]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/RecommandationController.php(24): view()
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\RecommandationController->form()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/sanda/Documents/S4/tri/PROJET_S4/public/index.php')
+CRITICAL - 2026-05-08 10:25:17 --> ErrorException: Trying to access array offset on value of type bool
+[Method: GET, Route: profiles/form/1]
+in APPPATH/Views/profiles/form.php on line 89.
+ 1 APPPATH/Views/profiles/form.php(89): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/sanda/Documents/S4/tri/PROJET_S4/app/Views/profiles/form.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/ProfileController.php(47): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\ProfileController->form()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/sanda/Documents/S4/tri/PROJET_S4/public/index.php')
+CRITICAL - 2026-05-08 10:27:00 --> ErrorException: Trying to access array offset on value of type bool
+[Method: GET, Route: profiles/form/1]
+in APPPATH/Views/profiles/form.php on line 89.
+ 1 APPPATH/Views/profiles/form.php(89): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/sanda/Documents/S4/tri/PROJET_S4/app/Views/profiles/form.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/ProfileController.php(47): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\ProfileController->form()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/sanda/Documents/S4/tri/PROJET_S4/public/index.php')
+CRITICAL - 2026-05-08 13:29:57 --> ErrorException: Undefined array key "nom"
+[Method: POST, Route: recommandation/calculer]
+in APPPATH\Views\recommandation\resultat.php on line 95.
+ 1 APPPATH\Views\recommandation\resultat.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nom"', 'C:\\Users\\itoki\\Documents\\GitHub\\PROJET_S4\\app\\Views\\recommandation\\resultat.php', 95)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\Users\\itoki\\Documents\\GitHub\\PROJET_S4\\app\\Views\\recommandation\\resultat.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('recommandation/resultat', [], true)
+ 5 APPPATH\Controllers\RecommandationController.php(102): view('recommandation/resultat', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\RecommandationController->calculer()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecommandationController))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\itoki\\Documents\\GitHub\\PROJET_S4\\public\\index.php')
