@@ -362,4 +362,35 @@ function jsonResponse($data, $statusCode = 200) {
     echo json_encode($data);
     exit;
 }
+
+function validerEtAppliquerCode($userId, $codeValue) {
+    $pdo = getDBConnection();
+    
+    $stmt = $pdo->prepare("CALL sp_recharger_portefeuille(?, ?, @p_status)");
+    $stmt->execute([$userId, $codeValue]);
+
+    $result = $pdo->query("SELECT @p_status AS status")->fetch();
+    
+    return $result['status']; 
+}
+
+
+function getPrixGold($userId, $prixBase) {
+    $pdo = getDBConnection();
+    
+    $stmt = $pdo->prepare("SELECT fn_calculer_prix_regime(?, ?) AS prix_final");
+    $stmt->execute([$userId, $prixBase]);
+    $result = $stmt->fetch();
+
+    return $result['prix_final'];
+}
+
+function getInfoPortefeuille($userId) {
+    $pdo = getDBConnection();
+    
+    $stmt = $pdo->prepare("SELECT balance, is_gold FROM user_wallet WHERE user_id = ?");
+    $stmt->execute([$userId]);
+    
+    return $stmt->fetch();
+}
 ?>
