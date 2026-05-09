@@ -18,6 +18,7 @@ $routes->get('regimes/show/(:num)', 'RegimeController::show/$1');
 $routes->get('regimes/edit/(:num)', 'RegimeController::edit/$1');
 $routes->post('regimes/update/(:num)', 'RegimeController::update/$1');
 $routes->get('regimes/delete/(:num)', 'RegimeController::delete/$1');
+$routes->post('regimes/delete/(:num)', 'RegimeController::delete/$1');
 
 // Routes pour les recommandations
 $routes->get('recommandations', 'RecommandationController::index');

@@ -1,0 +1,77 @@
+CRITICAL - 2026-05-09 11:28:39 --> ErrorException: Undefined array key "goal"
+[Method: GET, Route: regimes/edit/5]
+in APPPATH\Views\regimes\edit.php on line 58.
+ 1 APPPATH\Views\regimes\edit.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "goal"', 'C:\\Users\\itoki\\Documents\\GitHub\\PROJET_S4\\app\\Views\\regimes\\edit.php', 58)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\Users\\itoki\\Documents\\GitHub\\PROJET_S4\\app\\Views\\regimes\\edit.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('regimes/edit', [], true)
+ 5 APPPATH\Controllers\RegimeController.php(118): view('regimes/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\RegimeController->edit('5')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegimeController))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\itoki\\Documents\\GitHub\\PROJET_S4\\public\\index.php')
+CRITICAL - 2026-05-09 11:30:30 --> ErrorException: Undefined array key "goal"
+[Method: GET, Route: regimes/show/5]
+in APPPATH\Views\regimes\detail.php on line 27.
+ 1 APPPATH\Views\regimes\detail.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "goal"', 'C:\\Users\\itoki\\Documents\\GitHub\\PROJET_S4\\app\\Views\\regimes\\detail.php', 27)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\Users\\itoki\\Documents\\GitHub\\PROJET_S4\\app\\Views\\regimes\\detail.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('regimes/detail', [], true)
+ 5 APPPATH\Controllers\RegimeController.php(46): view('regimes/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\RegimeController->show('5')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegimeController))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\itoki\\Documents\\GitHub\\PROJET_S4\\public\\index.php')
+DEBUG - 2026-05-09 11:32:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-09 11:35:17 --> ErrorException: Undefined array key "goal"
+[Method: GET, Route: regimes/show/5]
+in APPPATH\Views\regimes\detail.php on line 27.
+ 1 APPPATH\Views\regimes\detail.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "goal"', 'C:\\Users\\itoki\\Documents\\GitHub\\PROJET_S4\\app\\Views\\regimes\\detail.php', 27)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\Users\\itoki\\Documents\\GitHub\\PROJET_S4\\app\\Views\\regimes\\detail.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('regimes/detail', [], true)
+ 5 APPPATH\Controllers\RegimeController.php(46): view('regimes/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\RegimeController->show('5')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegimeController))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\itoki\\Documents\\GitHub\\PROJET_S4\\public\\index.php')
+CRITICAL - 2026-05-09 11:35:26 --> ErrorException: Undefined array key "goal"
+[Method: GET, Route: regimes/edit/3]
+in APPPATH\Views\regimes\edit.php on line 58.
+ 1 APPPATH\Views\regimes\edit.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "goal"', 'C:\\Users\\itoki\\Documents\\GitHub\\PROJET_S4\\app\\Views\\regimes\\edit.php', 58)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\Users\\itoki\\Documents\\GitHub\\PROJET_S4\\app\\Views\\regimes\\edit.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('regimes/edit', [], true)
+ 5 APPPATH\Controllers\RegimeController.php(118): view('regimes/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\RegimeController->edit('3')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegimeController))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\itoki\\Documents\\GitHub\\PROJET_S4\\public\\index.php')
+CRITICAL - 2026-05-09 11:39:24 --> ErrorException: Undefined array key "goal"
+[Method: GET, Route: regimes/edit/5]
+in APPPATH\Views\regimes\edit.php on line 58.
+ 1 APPPATH\Views\regimes\edit.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "goal"', 'C:\\Users\\itoki\\Documents\\GitHub\\PROJET_S4\\app\\Views\\regimes\\edit.php', 58)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\Users\\itoki\\Documents\\GitHub\\PROJET_S4\\app\\Views\\regimes\\edit.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('regimes/edit', [], true)
+ 5 APPPATH\Controllers\RegimeController.php(118): view('regimes/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\RegimeController->edit('5')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegimeController))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\itoki\\Documents\\GitHub\\PROJET_S4\\public\\index.php')
+DEBUG - 2026-05-09 11:58:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
