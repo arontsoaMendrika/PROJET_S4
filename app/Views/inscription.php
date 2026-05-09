@@ -27,6 +27,14 @@
           <label for="naissance">Date de naissance *</label>
           <input type="date" id="naissance" name="naissance" required>
           <p class="error" id="error-naissance" aria-live="polite"></p>
+
+          <label for="genre">Genre</label>
+          <select id="genre" name="genre">
+            <option value="">Selectionnez votre genre</option>
+            <option value="homme">Homme</option>
+            <option value="femme">Femme</option>
+            <option value="autre">Autre</option>
+          </select>
         </fieldset>
 
         <fieldset>
