@@ -34,7 +34,7 @@ Objectif : clarifier les responsabilités, découper le travail en sous-tâches 
     - Développer le login, la déconnexion et la gestion du mot de passe oublié ou du changement de mot de passe.
     - Mettre en place le profil utilisateur avec les informations de base : nom, genre, taille, poids et objectifs.
     - Intégrer le profil santé et le calcul de l’IMC côté application, avec affichage du résultat et de son interprétation.
-    - Réaliser les formulaires HTML/CSS/JS, les validations front-end et les messages d’erreur associés.
+    - Réaliser les formulaires d, les validations front-end et les messages d’erreur associés.
     - Brancher les appels AJAX liés à l’authentification et à la mise à jour des données utilisateur.
     - Prévoir les tests fonctionnels sur les formulaires, les cas d’erreur et la navigation entre les pages.
 
