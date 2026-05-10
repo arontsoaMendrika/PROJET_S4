@@ -365,13 +365,27 @@ function jsonResponse($data, $statusCode = 200) {
 
 function validerEtAppliquerCode($userId, $codeValue) {
     $pdo = getDBConnection();
-    
-    $stmt = $pdo->prepare("CALL sp_recharger_portefeuille(?, ?, @p_status)");
-    $stmt->execute([$userId, $codeValue]);
 
-    $result = $pdo->query("SELECT @p_status AS status")->fetch();
-    
-    return $result['status']; 
+    // 1. On vérifie si le code existe et n'est pas utilisé
+    $stmt = $pdo->prepare("SELECT amount FROM recharge_codes WHERE code_value = ? AND is_used = FALSE");
+    $stmt->execute([$codeValue]);
+    $code = $stmt->fetch();
+
+    if ($code) {
+        $montant = $code['amount'];
+
+        // 2. On ajoute l'argent au portefeuille
+        $updateWallet = $pdo->prepare("UPDATE user_wallet SET balance = balance + ? WHERE user_id = ?");
+        $updateWallet->execute([$montant, $userId]);
+
+        // 3. On marque le code comme utilisé
+        $updateCode = $pdo->prepare("UPDATE recharge_codes SET is_used = TRUE WHERE code_value = ?");
+        $updateCode->execute([$codeValue]);
+
+        return "SUCCES";
+    }
+
+    return "CODE_INVALIDE";
 }
 
 

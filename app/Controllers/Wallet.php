@@ -6,32 +6,31 @@ use App\Models\WalletModel;
 
 class Wallet extends BaseController
 {
-  public function index() {
-    $walletModel = new \App\Models\WalletModel();
-    
+    public function index() {
+        $walletModel = new \App\Models\WalletModel();
+        $userId = 1;
 
-    $testWallet = $walletModel->chargerInfosWallet(1);
-    
-    
-    dd($testWallet); 
-}
-
-    public function recharger()
-    {
-        $walletModel = new WalletModel();
+        // ÉTAPE 2 : On teste la recharge avec le code que tu as créé en base
+        $resultat = $walletModel->rechargerPortefeuille($userId, 'REG001');
         
-        $code = $this->request->getPost('code_recharge');
-        $userId = session()->get('user_id'); 
-
-        $status = $walletModel->rechargerPortefeuille($userId, $code);
-
-        if ($status === 'SUCCES') {
-            return redirect()->to('/wallet')->with('success', 'Votre compte a été crédité !');
-        } else {
-            return redirect()->to('/wallet')->with('error', 'Code invalide ou déjà utilisé.');
-        }
+        // On récupère les infos mises à jour pour l'affichage
+        $data['wallet'] = $walletModel->chargerInfosWallet($userId);
+        
+        return view('wallet/index', $data);
     }
+public function recharger() {
+    $walletModel = new \App\Models\WalletModel();
+    $userId = 1; // On utilise toujours notre utilisateur de test
 
+    // 1. On récupère le code écrit dans l'input "code_recharge"
+    $code = $this->request->getPost('code_recharge');
+
+    // 2. On lance la recharge
+    $resultat = $walletModel->rechargerPortefeuille($userId, $code);
+
+    // 3. On redirige vers la page d'accueil du portefeuille pour voir le nouveau solde
+    return redirect()->to('/wallet');
+}
     public function devenirGold()
     {
         $userId = session()->get('user_id');
