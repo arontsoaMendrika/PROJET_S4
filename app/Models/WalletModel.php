@@ -5,7 +5,7 @@ namespace App\Models;
 use CodeIgniter\Model;
 
 // On inclut le fichier de fonctions pour pouvoir appeler getDBConnection() et les autres
-require_once APPPATH . 'includes/fonctions.php';
+require_once ROOTPATH . '/includes/fonctions.php';
 
 class WalletModel extends Model
 {

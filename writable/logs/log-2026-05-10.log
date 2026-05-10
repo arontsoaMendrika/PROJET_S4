@@ -1,0 +1,16 @@
+CRITICAL - 2026-05-10 12:44:51 --> ErrorException: require_once(/Users/mendrika/Desktop/L2/S4/Systeme_info/PROJET_S4-1/app/includes/fonctions.php): Failed to open stream: No such file or directory
+[Method: GET, Route: wallet]
+in APPPATH/Models/WalletModel.php on line 8.
+ 1 APPPATH/Models/WalletModel.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require_once(/Users/mendrika/Desktop/L2/S4/Systeme_info/PROJET_S4-1/app/includes/fonctions.php): Failed to open stream: No such file or directory', '/Users/mendrika/Desktop/L2/S4/Systeme_info/PROJET_S4-1/app/Models/WalletModel.php', 8)
+ 2 APPPATH/Models/WalletModel.php(8): require_once()
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(315): include_once('/Users/mendrika/Desktop/L2/S4/Systeme_info/PROJET_S4-1/app/Models/WalletModel.php')
+ 4 SYSTEMPATH/Autoloader/Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('/Users/mendrika/Desktop/L2/S4/Systeme_info/PROJET_S4-1/app/Models/WalletModel.php')
+ 5 SYSTEMPATH/Autoloader/Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\WalletModel')
+ 6 APPPATH/Controllers/Wallet.php(10): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\WalletModel')
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Wallet->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH/rewrite.php(44): require_once('/Users/mendrika/Desktop/L2/S4/Systeme_info/PROJET_S4-1/public/index.php')

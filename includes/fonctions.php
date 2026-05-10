@@ -6,10 +6,10 @@ function getDBConnection() {
     try {
         // Paramètres de connexion pour XAMPP MySQL
         $host = '127.0.0.1';
-        $port = '3306';
+        $port = '8889';
         $database = 'regime';
         $username = 'root';
-        $password = '';
+        $password = 'root';
         $charset = 'utf8mb4';
         
         // Créer la connexion avec TCP/IP pour XAMPP
@@ -392,5 +392,36 @@ function getInfoPortefeuille($userId) {
     $stmt->execute([$userId]);
     
     return $stmt->fetch();
+}
+
+/**
+ * Permet à l'utilisateur de passer en mode GOLD
+ */
+function activerAbonnementGold($userId) {
+    $pdo = getDBConnection();
+    $prixGold = 20.00; // Le tarif pour devenir membre VIP
+
+    try {
+        $pdo->beginTransaction();
+
+        // 1. Vérifier le solde
+        $stmt = $pdo->prepare("SELECT balance FROM user_wallet WHERE user_id = ?");
+        $stmt->execute([$userId]);
+        $wallet = $stmt->fetch();
+
+        if ($wallet['balance'] < $prixGold) {
+            return "SOLDE_INSUFFISANT";
+        }
+
+        // 2. Déduire l'argent et passer en Gold
+        $update = $pdo->prepare("UPDATE user_wallet SET balance = balance - ?, is_gold = 1 WHERE user_id = ?");
+        $update->execute([$prixGold, $userId]);
+
+        $pdo->commit();
+        return "SUCCES";
+    } catch (Exception $e) {
+        $pdo->rollBack();
+        return "ERREUR_TECHNIQUE";
+    }
 }
 ?>

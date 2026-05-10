@@ -40,3 +40,7 @@ $routes->post('profiles/save', 'ProfileController::save');
 
 // Route pour gérer les paramètres query string (?page=regimes)
 $routes->get('home', 'StaticController::home');
+
+$routes->get('wallet', 'Wallet::index');
+$routes->post('wallet/recharger', 'Wallet::recharger');
+$routes->get('wallet/devenirGold', 'Wallet::devenirGold');

@@ -26,10 +26,10 @@ class Database extends Config
      */
     public array $default = [
         'DSN'          => 'regime',
-        'hostname'     => 'localhost:3306',
+        'hostname'     => 'localhost:8889',
         'username'     => 'root',
-        'password'     => '',
-        'database'     => '',
+        'password'     => 'root',
+        'database'     => 'regime',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,
@@ -41,7 +41,7 @@ class Database extends Config
         'compress'     => false,
         'strictOn'     => false,
         'failover'     => [],
-        'port'         => 3306,
+        'port'         => 8889,
         'numberNative' => false,
         'foundRows'    => false,
         'dateFormat'   => [
