@@ -9,7 +9,7 @@
 <body>
   <main>
     <h1>Connexion</h1>
-    <form id="login-form" method="post" novalidate>
+    <form id="login-form" action="/login" method="post" novalidate>
       <label for="email">Email</label>
       <input type="email" id="email" name="email" required>
 
@@ -22,13 +22,7 @@
       </div>
     </form>
 
-    <script>
-      document.getElementById('login-form').addEventListener('submit', function(e){
-        // Placeholder: client-side validation
-        const email = document.getElementById('email').value;
-        if (!email || !email.includes('@')) { e.preventDefault(); alert('Veuillez saisir un email valide'); }
-      });
-    </script>
+    <script src="/assets/js/auth.js"></script>
   </main>
 </body>
 </html>

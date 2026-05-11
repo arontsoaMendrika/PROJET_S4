@@ -9,7 +9,7 @@
 <body>
   <main>
     <h1>Informations santé</h1>
-    <form id="health-form" novalidate>
+    <form id="health-form" action="/register-health" method="post" novalidate>
       <label for="taille">Taille (cm) *</label>
       <input type="number" id="taille" name="taille" min="30" max="300" required>
 
@@ -28,16 +28,7 @@
       <p class="result" id="imc-result" aria-live="polite"></p>
     </form>
 
-    <script>
-      document.getElementById('calc-imc').addEventListener('click', function(){
-        const t = parseFloat(document.getElementById('taille').value);
-        const p = parseFloat(document.getElementById('poids').value);
-        const out = document.getElementById('imc-result');
-        if (!t || !p) { out.textContent = 'Veuillez renseigner la taille et le poids.'; return; }
-        const m = p / ((t/100)*(t/100));
-        out.textContent = 'IMC: ' + m.toFixed(1) + ' (' + (m<18.5? 'Insuffisant': m<25? 'Normal' : m<30? 'Surpoids' : 'Obésité') + ')';
-      });
-    </script>
+    <script src="/assets/js/auth.js"></script>
   </main>
 </body>
 </html>
