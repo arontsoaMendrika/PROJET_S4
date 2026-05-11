@@ -45,3 +45,8 @@ $routes->get('home', 'StaticController::home');
 $routes->get('wallet', 'Wallet::index');
 $routes->post('wallet/recharger', 'Wallet::recharger');
 $routes->get('wallet/devenirGold', 'Wallet::devenirGold');
+
+// Routes pour le Back-Office (Mendrika)
+$routes->get('admin', 'Admin::index');
+
+$routes->post('admin/generateCodes', 'Admin::generateCodes');
