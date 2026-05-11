@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Inscription - Formulaire UX</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
   <main class="page">
@@ -12,7 +12,7 @@
       <h1>Creer un compte</h1>
       <p class="subtitle">Tous les champs marques * sont obligatoires.</p>
 
-      <form id="signup-form" novalidate>
+      <form id="signup-form" action="/register" method="post" novalidate>
         <fieldset>
           <legend>Informations personnelles</legend>
 
@@ -27,6 +27,14 @@
           <label for="naissance">Date de naissance *</label>
           <input type="date" id="naissance" name="naissance" required>
           <p class="error" id="error-naissance" aria-live="polite"></p>
+
+          <label for="genre">Genre</label>
+          <select id="genre" name="genre">
+            <option value="">Selectionnez votre genre</option>
+            <option value="homme">Homme</option>
+            <option value="femme">Femme</option>
+            <option value="autre">Autre</option>
+          </select>
         </fieldset>
 
         <fieldset>
@@ -82,6 +90,6 @@
     </section>
   </main>
 
-  <script src="script.js"></script>
+  <script src="/assets/js/auth.js"></script>
 </body>
 </html>
