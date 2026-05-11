@@ -11,7 +11,18 @@ class RegimeController extends BaseController
         // Inclure nos fonctions personnalisées
         require_once ROOTPATH . '/includes/fonctions.php';
 
-        $regimes = getAllRegimes();
+        $filters = [
+            'query' => $this->request->getGet('query'),
+            'type' => $this->request->getGet('type')
+        ];
+
+        // On utilise la fonction de filtre si au moins un paramètre existe, ou getAllRegimes() sinon
+        if (!empty($filters['query']) || !empty($filters['type'])) {
+            $regimes = filterRegimes($filters);
+        } else {
+            $regimes = getAllRegimes();
+        }
+
         $types = getAllRegimeTypes();
 
         // Préparer les données pour la vue
@@ -63,7 +74,7 @@ class RegimeController extends BaseController
     {
         require_once ROOTPATH . '/includes/fonctions.php';
 
-        if ($this->request->getMethod() !== 'post') {
+        if (!$this->request->is('post')) {
             return redirect()->to('/regimes');
         }
 
@@ -122,7 +133,7 @@ class RegimeController extends BaseController
     {
         require_once ROOTPATH . '/includes/fonctions.php';
 
-        if ($this->request->getMethod() !== 'post') {
+        if (!$this->request->is('post')) {
             return redirect()->to('/regimes');
         }
 
