@@ -8,39 +8,48 @@ class Wallet extends BaseController
 {
     public function index() {
         $walletModel = new \App\Models\WalletModel();
-        $userId = 1;
+        $userId = 1; // Toujours notre utilisateur test
 
-        // ÉTAPE 2 : On teste la recharge avec le code que tu as créé en base
-        $resultat = $walletModel->rechargerPortefeuille($userId, 'REG001');
+        // ON SUPPRIME la ligne $resultat = ... 'REG001' ...
         
-        // On récupère les infos mises à jour pour l'affichage
+        // On ne fait QUE récupérer les infos actuelles de la base
         $data['wallet'] = $walletModel->chargerInfosWallet($userId);
         
         return view('wallet/index', $data);
     }
-public function recharger() {
-    $walletModel = new \App\Models\WalletModel();
-    $userId = 1; // On utilise toujours notre utilisateur de test
 
-    // 1. On récupère le code écrit dans l'input "code_recharge"
-    $code = $this->request->getPost('code_recharge');
+    public function recharger() {
+        $walletModel = new \App\Models\WalletModel();
+        $userId = 1; 
 
-    // 2. On lance la recharge
-    $resultat = $walletModel->rechargerPortefeuille($userId, $code);
+        $code = $this->request->getPost('code_recharge');
 
-    // 3. On redirige vers la page d'accueil du portefeuille pour voir le nouveau solde
-    return redirect()->to('/wallet');
-}
-    public function devenirGold()
+        if ($code) {
+            $resultat = $walletModel->rechargerPortefeuille($userId, $code);
+            
+            // Optionnel : ajouter un message de succès
+            if ($resultat === "SUCCES") {
+                session()->setFlashdata('success', 'Votre compte a été crédité !');
+            } else {
+                session()->setFlashdata('error', 'Code invalide ou déjà utilisé.');
+            }
+        }
+
+        return redirect()->to('/wallet');
+    }
+  public function devenirGold()
     {
-        $userId = session()->get('user_id');
+        require_once(ROOTPATH . '/includes/fonctions.php');
+        // On remplace temporairement la session par notre ID de test
+        $userId = 1; 
         
+        // Ton appel à la fonction dans fonctions.php
         $result = activerAbonnementGold($userId);
 
         if ($result === "SUCCES") {
             return redirect()->to('/wallet')->with('success', 'Félicitations ! Vous êtes maintenant membre GOLD. ✨');
         } elseif ($result === "SOLDE_INSUFFISANT") {
-            return redirect()->to('/wallet')->with('error', 'Solde insuffisant pour l\'abonnement Gold.');
+            return redirect()->to('/wallet')->with('error', 'Solde insuffisant (il vous faut 20 €).');
         } else {
             return redirect()->to('/wallet')->with('error', 'Une erreur est survenue.');
         }
