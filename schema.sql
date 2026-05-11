@@ -1,5 +1,4 @@
 DROP DATABASE IF EXISTS regime;
-CREATE DATABASE regime CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE regime;
 
 -- Users

@@ -18,6 +18,20 @@
     -js/ajax
     -Base:Mysql
 
+### Conception de la Base de Données:
+
+**Tables principales:**
+- **users** — Stockage des utilisateurs (email, mot de passe, rôle)
+- **diets** — Régimes/plans alimentaires (nom, durée, description)
+- **meals** — Repas associés à un régime (date, notes)
+- **recipes** — Recettes disponibles (titre, instructions, image)
+- **ingredients** — Liste des ingrédients (nom unique)
+- **recipe_ingredients** — Liaison recettes ↔ ingrédients (quantité)
+- **meal_items** — Articles du repas (recette + portion)
+- **measurements** — Mesures utilisateur (poids, tour de taille, date)
+- **progress_logs** — Journaux de progression personnels
+- **audit_logs** — Logs d'audit des actions (trace de sécurité)
+
 ### Restriction des données: (en minimale)
     -5 utilisateurs
     -15 codes
