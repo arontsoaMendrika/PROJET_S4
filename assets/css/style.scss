@@ -1,0 +1,513 @@
+// Variables SCSS pour le thème régime VIP
+$primary-color: #6B46C1;
+$secondary-color: #EC4899;
+$accent-color: #F59E0B;
+$success-color: #10B981;
+$error-color: #EF4444;
+$warning-color: #F59E0B;
+$info-color: #3B82F6;
+
+$light-bg: #F9FAFB;
+$dark-bg: #1F2937;
+$card-bg: #FFFFFF;
+$text-primary: #111827;
+$text-secondary: #6B7280;
+$text-light: #9CA3AF;
+
+$border-radius: 12px;
+$border-radius-sm: 8px;
+$border-radius-lg: 16px;
+
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+// Mixins
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin card {
+    background: $card-bg;
+    border-radius: $border-radius;
+    box-shadow: $shadow-md;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+@mixin button($bg-color, $text-color: white) {
+    background: $bg-color;
+    color: $text-color;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: $border-radius-sm;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: $shadow-lg;
+    }
+    
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        transform: none;
+    }
+}
+
+// Reset et styles de base
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: $text-primary;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+// Header
+.header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    
+    .nav {
+        @include flex-center;
+        justify-content: space-between;
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: $primary-color;
+            
+            .vip-badge {
+                background: linear-gradient(45deg, #FFD700, #FFA500);
+                color: #000;
+                padding: 0.125rem 0.5rem;
+                border-radius: 12px;
+                font-size: 0.75rem;
+                font-weight: 600;
+            }
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            
+            a {
+                color: $text-primary;
+                text-decoration: none;
+                font-weight: 500;
+                transition: color 0.3s ease;
+                
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+// Cards
+.card {
+    @include card;
+    
+    &.hover-lift:hover {
+        transform: translateY(-4px);
+        box-shadow: $shadow-xl;
+    }
+    
+    .card-header {
+        margin-bottom: 1rem;
+        
+        h2, h3 {
+            color: $text-primary;
+            margin-bottom: 0.5rem;
+        }
+    }
+    
+    .card-body {
+        color: $text-secondary;
+    }
+    
+    .card-footer {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid #E5E7EB;
+        @include flex-center;
+        justify-content: space-between;
+    }
+}
+
+// Buttons
+.btn {
+    @include button($primary-color);
+    
+    &.btn-secondary {
+        @include button($secondary-color);
+    }
+    
+    &.btn-success {
+        @include button($success-color);
+    }
+    
+    &.btn-warning {
+        @include button($warning-color);
+    }
+    
+    &.btn-danger {
+        @include button($error-color);
+    }
+    
+    &.btn-outline {
+        background: transparent;
+        border: 2px solid $primary-color;
+        color: $primary-color;
+        
+        &:hover {
+            background: $primary-color;
+            color: white;
+        }
+    }
+    
+    &.btn-gold {
+        background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+        color: #000;
+    }
+    
+    &.btn-sm {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+    
+    &.btn-lg {
+        padding: 1rem 2rem;
+        font-size: 1.125rem;
+    }
+}
+
+// Forms
+.form-group {
+    margin-bottom: 1.5rem;
+    
+    label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: $text-primary;
+    }
+    
+    input, select, textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border: 2px solid #E5E7EB;
+        border-radius: $border-radius-sm;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+        
+        &:focus {
+            outline: none;
+            border-color: $primary-color;
+            box-shadow: 0 0 0 3px rgba(107, 70, 193, 0.1);
+        }
+        
+        &.is-invalid {
+            border-color: $error-color;
+        }
+    }
+    
+    textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+    
+    .error-message {
+        color: $error-color;
+        font-size: 0.875rem;
+        margin-top: 0.25rem;
+    }
+}
+
+// Grid
+.grid {
+    display: grid;
+    gap: 1.5rem;
+    
+    &.grid-1 { grid-template-columns: 1fr; }
+    &.grid-2 { grid-template-columns: repeat(2, 1fr); }
+    &.grid-3 { grid-template-columns: repeat(3, 1fr); }
+    &.grid-4 { grid-template-columns: repeat(4, 1fr); }
+    
+    @media (max-width: 768px) {
+        &.grid-2, &.grid-3, &.grid-4 {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+// Regime cards
+.regime-card {
+    @include card;
+    position: relative;
+    overflow: hidden;
+    
+    .regime-badge {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: $accent-color;
+        color: white;
+        padding: 0.25rem 0.75rem;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 600;
+    }
+    
+    .regime-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        color: $text-primary;
+    }
+    
+    .regime-type {
+        color: $text-secondary;
+        font-size: 0.875rem;
+        margin-bottom: 1rem;
+    }
+    
+    .regime-description {
+        color: $text-secondary;
+        margin-bottom: 1rem;
+        line-height: 1.5;
+    }
+    
+    .regime-stats {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        
+        .stat {
+            text-align: center;
+            flex: 1;
+            
+            .stat-value {
+                font-size: 1.25rem;
+                font-weight: bold;
+                color: $primary-color;
+            }
+            
+            .stat-label {
+                font-size: 0.75rem;
+                color: $text-secondary;
+            }
+        }
+    }
+    
+    .regime-price {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $success-color;
+        margin-bottom: 1rem;
+    }
+    
+    .regime-actions {
+        display: flex;
+        gap: 0.5rem;
+        
+        .btn {
+            flex: 1;
+        }
+    }
+}
+
+// Recommendations
+.recommendation-card {
+    @include card;
+    background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    
+    .match-score {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: $success-color;
+        color: white;
+        padding: 0.5rem;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        @include flex-center;
+        font-weight: bold;
+        font-size: 0.875rem;
+    }
+    
+    .recommendation-text {
+        color: $text-secondary;
+        margin-bottom: 1rem;
+        font-style: italic;
+    }
+}
+
+// BMI Calculator
+.bmi-calculator {
+    @include card;
+    
+    .bmi-result {
+        text-align: center;
+        padding: 2rem;
+        
+        .bmi-value {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .bmi-category {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+        
+        &.underweight { .bmi-value { color: #3B82F6; } }
+        &.normal { .bmi-value { color: $success-color; } }
+        &.overweight { .bmi-value { color: $warning-color; } }
+        &.obese { .bmi-value { color: $error-color; } }
+    }
+}
+
+// Loading and animations
+.loading {
+    @include flex-center;
+    padding: 2rem;
+    
+    .spinner {
+        width: 40px;
+        height: 40px;
+        border: 4px solid #E5E7EB;
+        border-top: 4px solid $primary-color;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+}
+
+// Alerts
+.alert {
+    padding: 1rem;
+    border-radius: $border-radius-sm;
+    margin-bottom: 1rem;
+    
+    &.alert-success {
+        background: rgba(16, 185, 129, 0.1);
+        color: $success-color;
+        border: 1px solid rgba(16, 185, 129, 0.2);
+    }
+    
+    &.alert-error {
+        background: rgba(239, 68, 68, 0.1);
+        color: $error-color;
+        border: 1px solid rgba(239, 68, 68, 0.2);
+    }
+    
+    &.alert-warning {
+        background: rgba(245, 158, 11, 0.1);
+        color: $warning-color;
+        border: 1px solid rgba(245, 158, 11, 0.2);
+    }
+    
+    &.alert-info {
+        background: rgba(59, 130, 246, 0.1);
+        color: $info-color;
+        border: 1px solid rgba(59, 130, 246, 0.2);
+    }
+}
+
+// Footer
+.footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+    
+    .footer-content {
+        @include flex-center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+// Responsive
+@media (max-width: 768px) {
+    .container {
+        padding: 0 0.5rem;
+    }
+    
+    .header .nav {
+        flex-direction: column;
+        gap: 1rem;
+        
+        .nav-links {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-group {
+        margin-bottom: 1rem;
+    }
+}

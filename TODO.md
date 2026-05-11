@@ -59,3 +59,5 @@ Consignes pratiques :
 
 Si vous validez cette répartition, j'applique la version finale dans le TODO et je peux générer une checklist par membre.
         
+ ## link
+https://docs.google.com/spreadsheets/d/1eOorjkS0sSq2ccBBFyKlks7bUPqTxrM8sseXgRu-K3s/edit?usp=sharing
