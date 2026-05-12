@@ -102,19 +102,25 @@ class RecommandationController extends BaseController
         return view('recommandation/resultat', $data);
     }
 
-    public function exportPDF() 
-{
-    $db = \Config\Database::connect();
-    $userId = session()->get('user_id');
-    
-    // On récupère le profil
-    $profile = $db->table('user_profiles')->where('user_id', $userId)->get()->getRowArray();
+ public function exportPDF() 
+    {
+        $db = \Config\Database::connect();
+        $userId = session()->get('user_id');
+        
+        $user = $db->table('users')->where('id', $userId)->get()->getRowArray();
+        $profile = $db->table('user_profiles')->where('user_id', $userId)->get()->getRowArray();
 
-    // Vérification de sécurité
-    if (!$profile || empty($profile['height']) || empty($profile['weight'])) {
-        return redirect()->back()->with('error', 'Profil incomplet pour l\'exportation.');
+        if (!$profile) {
+            return redirect()->back()->with('error', 'Données manquantes');
+        }
+
+        $data = [
+            'user' => $user,
+            'profile' => $profile,
+            'imc' => $profile['weight'] / (($profile['height']/100) ** 2),
+            'is_print' => true 
+        ];
+
+        return view('recommandations/report_pdf', $data);
     }
-
-   
-}
 }

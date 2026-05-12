@@ -63,6 +63,22 @@
             background-color: var(--el-gold);
         }
 
+        .nav-links-home a {
+            color: var(--el-white);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(197,160,89,0.45);
+            padding: 8px 16px;
+            transition: all 0.3s;
+        }
+        .nav-links-home a:hover {
+            color: var(--el-black);
+            background-color: var(--el-gold);
+            border-color: var(--el-gold);
+        }
+
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(26,26,26,0.5), rgba(26,26,26,0.8)), url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1920&q=80') center/cover;
@@ -167,16 +183,25 @@
     <header class="topbar sticky-top">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-5 text-center text-md-start">
+                <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
                     <a href="<?= base_url() ?>" class="logo">
                         L'ÉLÉGANCE <span>Nutrition</span>
                     </a>
                 </div>
-                <div class="col-md-7 text-center text-md-end mt-3 mt-md-0">
-                    <p class="mb-0 d-inline-block me-4 text-light" style="font-weight: 300; letter-spacing: 1px;">L'excellence de votre bien-être</p>
-                    <a href="#" class="tel-action">
-                        <i class="fas fa-concierge-bell me-2"></i> Service VIP
-                    </a>
+                <div class="col-md-8 text-center text-md-end mt-3 mt-md-0">
+                    <div class="d-flex flex-column flex-md-row align-items-center justify-content-md-end gap-3">
+                        <div class="nav-links-home d-flex flex-wrap justify-content-center justify-content-md-end gap-2">
+                            <a href="<?= base_url() ?>">Accueil</a>
+                            <a href="<?= base_url('regimes') ?>">Régimes</a>
+                            <a href="<?= base_url('recommandation') ?>">Recommandation</a>
+                            <a href="<?= base_url('profiles') ?>">Profil</a>
+                            <a href="<?= base_url('wallet') ?>">Portefeuille</a>
+                        </div>
+                        <p class="mb-0 text-light" style="font-weight: 300; letter-spacing: 1px;">L'excellence de votre bien-être</p>
+                        <a href="#" class="tel-action">
+                            <i class="fas fa-concierge-bell me-2"></i> Service VIP
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -12,7 +12,7 @@ class Auth extends BaseController
         helper('url');
         $userModel = new UserModel();
 
-        if ($this->request->getMethod() === 'post') {
+        if ($this->request->is('post')) {
             $nom = trim($this->request->getPost('nom'));
             $prenom = trim($this->request->getPost('prenom'));
             $email = trim($this->request->getPost('email'));
@@ -53,7 +53,7 @@ class Auth extends BaseController
         $measureModel = new MeasurementsModel();
         $userModel = new UserModel();
 
-        if ($this->request->getMethod() === 'post') {
+        if ($this->request->is('post')) {
             $taille = (float) $this->request->getPost('taille');
             $poids = (float) $this->request->getPost('poids');
             $activite = $this->request->getPost('activite');
@@ -90,7 +90,7 @@ class Auth extends BaseController
         helper('url');
         $userModel = new UserModel();
 
-        if ($this->request->getMethod() === 'post') {
+        if ($this->request->is('post')) {
             $email = trim($this->request->getPost('email'));
             $password = $this->request->getPost('password');
 
@@ -113,7 +113,7 @@ class Auth extends BaseController
         helper('url');
         $userModel = new UserModel();
 
-        if ($this->request->getMethod() === 'post') {
+        if ($this->request->is('post')) {
             $email = trim($this->request->getPost('email'));
             $user = $userModel->where('email', $email)->first();
             if ($user) {

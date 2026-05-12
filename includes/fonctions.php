@@ -7,10 +7,10 @@ function getDBConnection()
     try {
         // Paramètres de connexion pour XAMPP MySQL
         $host = '127.0.0.1';
-        $port = '3306';
+        $port = '8889';
         $database = 'regime';
         $username = 'root';
-        $password = '';
+        $password = 'root';
         $charset = 'utf8mb4';
 
         // Créer la connexion avec TCP/IP pour XAMPP

@@ -14,3 +14,84 @@ in APPPATH/Models/WalletModel.php on line 8.
 11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 13 SYSTEMPATH/rewrite.php(44): require_once('/Users/mendrika/Desktop/L2/S4/Systeme_info/PROJET_S4-1/public/index.php')
+CRITICAL - 2026-05-10 12:56:46 --> PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE regime.sp_recharger_portefeuille does not exist
+[Method: GET, Route: wallet]
+in ROOTPATH/includes/fonctions.php on line 370.
+ 1 ROOTPATH/includes/fonctions.php(370): PDOStatement->execute([...])
+ 2 APPPATH/Models/WalletModel.php(20): validerEtAppliquerCode(1, 'REG001')
+ 3 APPPATH/Controllers/Wallet.php(14): App\Models\WalletModel->rechargerPortefeuille(1, 'REG001')
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Wallet->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Users/mendrika/Desktop/L2/S4/Systeme_info/PROJET_S4-1/public/index.php')
+DEBUG - 2026-05-10 13:02:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-10 13:03:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-10 13:03:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-10 13:03:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-10 13:03:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-10 13:03:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-10 13:03:27 --> Error: Call to undefined function App\Controllers\activerAbonnementGold()
+[Method: GET, Route: wallet/devenirGold]
+in APPPATH/Controllers/Wallet.php on line 42.
+ 1 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Wallet->devenirGold()
+ 2 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/Users/mendrika/Desktop/L2/S4/Systeme_info/PROJET_S4-1/public/index.php')
+DEBUG - 2026-05-10 13:04:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-10 13:04:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-10 13:06:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-10 13:07:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-10 13:07:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-10 13:07:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-10 13:07:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-10 13:08:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-10 13:08:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-10 13:08:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-10 13:08:37 --> ErrorException: Undefined variable $code
+[Method: POST, Route: wallet/recharger]
+in APPPATH/Controllers/Wallet.php on line 30.
+ 1 APPPATH/Controllers/Wallet.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $code', '/Users/mendrika/Desktop/L2/S4/Systeme_info/PROJET_S4-1/app/Controllers/Wallet.php', 30)
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Wallet->recharger()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/Users/mendrika/Desktop/L2/S4/Systeme_info/PROJET_S4-1/public/index.php')
+CRITICAL - 2026-05-10 13:08:41 --> ErrorException: Undefined variable $code
+[Method: POST, Route: wallet/recharger]
+in APPPATH/Controllers/Wallet.php on line 30.
+ 1 APPPATH/Controllers/Wallet.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $code', '/Users/mendrika/Desktop/L2/S4/Systeme_info/PROJET_S4-1/app/Controllers/Wallet.php', 30)
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Wallet->recharger()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/Users/mendrika/Desktop/L2/S4/Systeme_info/PROJET_S4-1/public/index.php')
+DEBUG - 2026-05-10 13:11:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-10 13:11:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-10 13:11:20 --> Error: Call to undefined function App\Controllers\activerAbonnementGold()
+[Method: GET, Route: wallet/devenirGold]
+in APPPATH/Controllers/Wallet.php on line 40.
+ 1 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Wallet->devenirGold()
+ 2 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/Users/mendrika/Desktop/L2/S4/Systeme_info/PROJET_S4-1/public/index.php')
+DEBUG - 2026-05-10 13:11:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-10 13:11:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-10 13:18:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-10 13:18:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-10 13:18:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-10 13:18:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-10 13:18:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-10 13:18:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

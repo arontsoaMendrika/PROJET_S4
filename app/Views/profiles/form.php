@@ -4,32 +4,145 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil Utilisateur - RégimeVIP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --el-gold: #C5A059;
+            --el-gold-dark: #A58039;
+            --el-black: #1A1A1A;
+            --el-dark-grey: #2C2C2C;
+            --el-white: #FAFAFA;
+        }
+        body {
+            background: var(--el-white);
+            color: var(--el-black);
+            font-family: 'Montserrat', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        .topbar {
+            background-color: var(--el-black);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .topbar .logo {
+            color: var(--el-gold);
+            text-decoration: none;
+            letter-spacing: 2px;
+            font-size: 1.7rem;
+        }
+        .topbar .logo span {
+            color: var(--el-white);
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+        .nav-links-home a {
+            color: var(--el-white);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(197,160,89,0.45);
+            padding: 8px 14px;
+            transition: all 0.3s;
+        }
+        .nav-links-home a:hover,
+        .nav-links-home a.active {
+            color: var(--el-black);
+            background-color: var(--el-gold);
+            border-color: var(--el-gold);
+        }
+        .page-shell {
+            padding: 40px 0 60px;
+        }
+        .card {
+            border-radius: 0;
+            border: 1px solid #eaeaea;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.04);
+            overflow: hidden;
+            background: #fff;
+        }
+        .card-header {
+            background-color: var(--el-dark-grey);
+            color: var(--el-gold);
+            border-bottom: none;
+            letter-spacing: 1px;
+            padding: 18px 24px;
+        }
+        .card-body {
+            padding: 24px;
+        }
+        .form-label {
+            color: var(--el-black);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+        }
+        .form-input, .form-select, .form-textarea {
+            width: 100%;
+            border: 1px solid #cfcfcf;
+            padding: 12px 14px;
+            border-radius: 0;
+            background: #fff;
+        }
+        .btn-primary, .btn-secondary {
+            border-radius: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 10px 16px;
+        }
+        .btn-primary {
+            background: var(--el-gold);
+            border-color: var(--el-gold);
+            color: var(--el-black);
+        }
+        .btn-primary:hover {
+            background: var(--el-gold-dark);
+            border-color: var(--el-gold-dark);
+            color: var(--el-black);
+        }
+        .btn-secondary {
+            background: transparent;
+            color: var(--el-black);
+            border: 1px solid #bbb;
+        }
+        .btn-secondary:hover {
+            background: var(--el-black);
+            color: var(--el-white);
+            border-color: var(--el-black);
+        }
+        .profile-muted {
+            color: #777;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <nav class="nav container">
-            <div class="logo">
-                <i class="fas fa-crown text-yellow-400"></i>
-                <span>RégimeVIP</span>
-                <span class="vip-badge">ADMIN</span>
+    <header class="topbar sticky-top">
+        <div class="container">
+            <div class="d-flex flex-column flex-lg-row align-items-center justify-content-between gap-3">
+                <a href="<?= base_url() ?>" class="logo brand-logo">
+                    L'ÉLÉGANCE <span>Nutrition</span>
+                </a>
+                <div class="nav-links-home d-flex flex-wrap justify-content-center justify-content-lg-end gap-2">
+                    <a href="<?= base_url() ?>">Accueil</a>
+                    <a href="<?= base_url('regimes') ?>">Régimes</a>
+                    <a href="<?= base_url('recommandation') ?>">Recommandations</a>
+                    <a href="<?= base_url('profiles/form/' . $userId) ?>">Profil</a>
+                    <a href="<?= base_url('admin') ?>">Dashboard</a>
+                </div>
             </div>
-            <ul class="nav-links">
-                <li><a href="/">Accueil</a></li>
-                <li><a href="/regimes">Régimes</a></li>
-                <li><a href="/recommandations" class="text-yellow-400">Recommandations</a></li>
-                <li><a href="/profiles/form/<?php echo $userId; ?>" class="text-yellow-400">Profils</a></li>
-            </ul>
-        </nav>
+        </div>
     </header>
 
     <!-- Main Content -->
-    <main class="container py-8">
-        <div class="mb-6">
-            <a href="/" class="btn btn-secondary">
+    <main class="container page-shell">
+        <div class="mb-4">
+            <a href="<?= base_url() ?>" class="btn btn-secondary">
                 <i class="fas fa-arrow-left mr-2"></i>Retour à l'accueil
             </a>
         </div>
@@ -58,7 +171,7 @@
                     <?php unset($_SESSION['errors']); ?>
                 <?php endif; ?>
 
-                <form method="POST" action="/profiles/save" class="space-y-8">
+                <form method="POST" action="<?= base_url('profiles/save') ?>" class="space-y-8">
                     <input type="hidden" name="user_id" value="<?php echo $userId; ?>">
 
                     <!-- Informations physiques -->
@@ -160,11 +273,11 @@
                     <!-- Actions -->
                     <div class="flex justify-end space-x-4 mt-8">
                         <?php if (isset($profile)): ?>
-                            <a href="/profiles/show/<?php echo $userId; ?>" class="btn btn-secondary">
+                            <a href="<?= base_url('profiles/show/' . $userId) ?>" class="btn btn-secondary">
                                 Annuler
                             </a>
                         <?php else: ?>
-                            <a href="/" class="btn btn-secondary">
+                            <a href="<?= base_url() ?>" class="btn btn-secondary">
                                 Annuler
                             </a>
                         <?php endif; ?>

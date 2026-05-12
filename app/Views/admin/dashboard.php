@@ -9,7 +9,7 @@
     <div class="alert alert-warning">
          Veuillez compléter votre profil (taille et poids) pour générer votre programme.
     </div>
-    <button class="btn btn-secondary" disabled>📥 Télécharger mon programme (PDF)</button>
+    <button class="btn btn-secondary" disabled>Télécharger mon programme (PDF)</button>
 <?php endif; ?>
 
 <div class="container py-5">
