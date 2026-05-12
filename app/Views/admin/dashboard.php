@@ -1,6 +1,17 @@
 <?= $this->extend('layouts/elegance') ?>
 <?= $this->section('content') ?>
 
+<?php if (!empty($profile['height']) && !empty($profile['weight'])): ?>
+    <a href="<?= base_url('recommandation/exportPDF') ?>" class="btn btn-primary">
+         Télécharger mon programme (PDF)
+    </a>
+<?php else: ?>
+    <div class="alert alert-warning">
+         Veuillez compléter votre profil (taille et poids) pour générer votre programme.
+    </div>
+    <button class="btn btn-secondary" disabled>📥 Télécharger mon programme (PDF)</button>
+<?php endif; ?>
+
 <div class="container py-5">
     <h2 class="mb-4" style="font-family:'Playfair Display', serif;">Tableau de Bord Admin</h2>
     

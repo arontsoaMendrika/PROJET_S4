@@ -101,4 +101,20 @@ class RecommandationController extends BaseController
 
         return view('recommandation/resultat', $data);
     }
+
+    public function exportPDF() 
+{
+    $db = \Config\Database::connect();
+    $userId = session()->get('user_id');
+    
+    // On récupère le profil
+    $profile = $db->table('user_profiles')->where('user_id', $userId)->get()->getRowArray();
+
+    // Vérification de sécurité
+    if (!$profile || empty($profile['height']) || empty($profile['weight'])) {
+        return redirect()->back()->with('error', 'Profil incomplet pour l\'exportation.');
+    }
+
+   
+}
 }
