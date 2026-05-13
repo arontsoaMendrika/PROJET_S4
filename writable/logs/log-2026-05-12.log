@@ -85,3 +85,83 @@ DEBUG - 2026-05-12 08:49:19 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2026-05-12 08:49:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2026-05-12 08:49:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2026-05-12 08:53:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-12 23:21:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-12 23:21:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-12 23:26:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-05-12 23:37:00 --> Error connecting to the database: mysqli_sql_exception: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée in C:\Users\itoki\Documents\GitHub\PROJET_S4\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\itoki\Documents\GitHub\PROJET_S4\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost:8889', 'root', Object(SensitiveParameterValue), 'regime', 8889, '', 0)
+#1 C:\Users\itoki\Documents\GitHub\PROJET_S4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\itoki\Documents\GitHub\PROJET_S4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\itoki\Documents\GitHub\PROJET_S4\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\itoki\Documents\GitHub\PROJET_S4\system\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\itoki\Documents\GitHub\PROJET_S4\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\Users\itoki\Documents\GitHub\PROJET_S4\app\Controllers\Auth.php(26): CodeIgniter\BaseModel->first()
+#7 C:\Users\itoki\Documents\GitHub\PROJET_S4\system\CodeIgniter.php(951): App\Controllers\Auth->register()
+#8 C:\Users\itoki\Documents\GitHub\PROJET_S4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\Users\itoki\Documents\GitHub\PROJET_S4\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\itoki\Documents\GitHub\PROJET_S4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\itoki\Documents\GitHub\PROJET_S4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\itoki\Documents\GitHub\PROJET_S4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\itoki\Documents\GitHub\PROJET_S4\system\rewrite.php(44): require_once('C:\\Users\\itoki\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée in C:\Users\itoki\Documents\GitHub\PROJET_S4\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\itoki\Documents\GitHub\PROJET_S4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\itoki\Documents\GitHub\PROJET_S4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\itoki\Documents\GitHub\PROJET_S4\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\itoki\Documents\GitHub\PROJET_S4\system\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\itoki\Documents\GitHub\PROJET_S4\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 C:\Users\itoki\Documents\GitHub\PROJET_S4\app\Controllers\Auth.php(26): CodeIgniter\BaseModel->first()
+#6 C:\Users\itoki\Documents\GitHub\PROJET_S4\system\CodeIgniter.php(951): App\Controllers\Auth->register()
+#7 C:\Users\itoki\Documents\GitHub\PROJET_S4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\Users\itoki\Documents\GitHub\PROJET_S4\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\itoki\Documents\GitHub\PROJET_S4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\itoki\Documents\GitHub\PROJET_S4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\itoki\Documents\GitHub\PROJET_S4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\itoki\Documents\GitHub\PROJET_S4\system\rewrite.php(44): require_once('C:\\Users\\itoki\\...')
+#13 {main}
+CRITICAL - 2026-05-12 23:37:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Auth.php(26): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->register()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\itoki\\Documents\\GitHub\\PROJET_S4\\public\\index.php')
+DEBUG - 2026-05-12 23:39:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-12 23:40:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-12 23:40:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-12 23:40:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-12 23:41:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-12 23:43:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-12 23:43:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-12 23:47:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-12 23:47:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-12 23:48:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-12 23:48:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-12 23:48:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-12 23:48:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-12 23:50:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-12 23:51:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-12 23:51:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-12 23:51:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-12 23:52:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-12 23:53:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-12 23:59:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-12 23:59:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-12 23:59:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-12 23:59:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-12 23:59:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

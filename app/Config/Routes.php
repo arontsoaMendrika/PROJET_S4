@@ -13,6 +13,7 @@ $routes->get('register-health', 'Auth::registerHealth');
 $routes->get('login', 'Auth::login');
 $routes->get('forgot-password', 'Auth::forgotPassword');
 $routes->get('profile', 'Auth::profile');
+$routes->get('logout', 'Auth::logout');
 // POST handlers
 $routes->post('register', 'Auth::register');
 $routes->post('register-health', 'Auth::registerHealth');
@@ -44,7 +45,7 @@ $routes->get('profiles/form/(:num)', 'ProfileController::form/$1');
 $routes->get('profiles/show/(:num)', 'ProfileController::show/$1');
 $routes->post('profiles/save', 'ProfileController::save');
 
-// Routes API pour AJAX (à implémenter plus tard)
+// Routes API pour AJAX (Ã  implémenter plus tard)
 // $routes->get('api/stats', 'ApiController::stats');
 // $routes->get('api/search', 'ApiController::search');
 // $routes->post('api/filter', 'ApiController::filter');

@@ -1,39 +1,12 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Créer un Régime - RégimeVIP</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav container">
-            <div class="logo">
-                <i class="fas fa-crown text-yellow-400"></i>
-                <span>RégimeVIP</span>
-                <span class="vip-badge">ADMIN</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="../../views/home.php">Accueil</a></li>
-                <li><a href="index.php" class="text-yellow-400">Régimes</a></li>
-                <li><a href="../recommendations/form.php">Recommandations</a></li>
-                <li><a href="../profiles/form.php?user_id=1">Profils</a></li>
-            </ul>
-        </nav>
-    </header>
+<?= $this->extend('layouts/elegance') ?>
+<?= $this->section('content') ?>
+<!-- Header -->
+    
 
     <!-- Main Content -->
     <main class="container py-8">
         <div class="mb-8">
-            <nav class="flex items-center space-x-2 text-sm">
-                <a href="index.php" class="text-purple-600 hover:text-purple-800">Régimes</a>
-                <i class="fas fa-chevron-right text-gray-400"></i>
-                <span class="text-gray-600">Créer un régime</span>
-            </nav>
+            
             <h1 class="text-3xl font-bold text-white mt-4">Créer un Nouveau Régime</h1>
             <p class="text-white text-opacity-80">Ajoutez un programme nutritionnel personnalisé</p>
         </div>
@@ -270,6 +243,4 @@
     </script>
 
     <?php unset($_SESSION['old']); ?>
-</body>
-</html>
-
+<?= $this->endSection() ?>

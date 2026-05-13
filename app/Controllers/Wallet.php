@@ -13,7 +13,14 @@ class Wallet extends BaseController
         // ON SUPPRIME la ligne $resultat = ... 'REG001' ...
         
         // On ne fait QUE récupérer les infos actuelles de la base
-        $data['wallet'] = $walletModel->chargerInfosWallet($userId);
+        $wallet = $walletModel->chargerInfosWallet($userId);
+        
+        // Protection : si la requête échoue (table absente, etc.), on fournit des valeurs par défaut
+        if (!is_array($wallet)) {
+            $wallet = ['user_id' => $userId, 'balance' => 0.00, 'is_gold' => 0];
+        }
+        
+        $data['wallet'] = $wallet;
         
         return view('wallet/index', $data);
     }

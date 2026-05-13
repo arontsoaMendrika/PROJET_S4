@@ -1,4 +1,4 @@
-﻿<?= $this->extend('layouts/elegance') ?>
+<?= $this->extend('layouts/elegance') ?>
 <?= $this->section('content') ?>
 <div class="container mb-5">
     <div class="text-center mb-5">
@@ -42,13 +42,13 @@
                         <?= isset($regime) && $regime ? esc($regime['name']) : 'Régime Sur-mesure' ?>
                     </h3>
                     <p class="text-muted" style="line-height:1.7;">
-                        <?= isset($regime) && $regime ? esc($regime['description']) : 'Ce programme détaillé a pour objectif de vous apporter un équilibre parfait entre nutrition et saveurs, adapté à votre physiologie.' ?>
+                        <?= isset($regime) && $regime ? esc($regime['description']) : 'Ce programme détaillé a pour objectif de vous apporter un équilibre parfait entre nutrition et saveurs, adapté Ã  votre physiologie.' ?>
                     </p>
                     
                     <?php if(isset($regime) && isset($regime['price_per_day'])): ?>
                     <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
                         <span class="text-uppercase text-muted" style="font-size:0.75rem; letter-spacing:1px;">Tarif d'accompagnement</span>
-                        <strong style="color:var(--el-gold-dark); font-size:1.1rem;"><?= number_format($regime['price_per_day'], 2, ',', ' ') ?> € <small class="text-muted fw-normal" style="font-size:0.8rem;">/ jour</small></strong>
+                        <strong style="color:var(--el-gold-dark); font-size:1.1rem;"><?= number_format($regime['price_per_day'], 2, ',', ' ') ?> â‚¬ <small class="text-muted fw-normal" style="font-size:0.8rem;">/ jour</small></strong>
                     </div>
                     <?php endif; ?>
                 </div>
@@ -60,7 +60,7 @@
                         <?= isset($activite) && $activite ? esc($activite['name']) : 'Vitalité Douce' ?>
                     </h3>
                     <p class="text-muted mb-0" style="line-height:1.7;">
-                        <?= isset($activite) && $activite ? esc($activite['description']) : 'Pour sculpter votre corps et l\'harmoniser avec votre nouveau régime diététique. Fréquence : 3 à 4 séances hebdomadaires.' ?>
+                        <?= isset($activite) && $activite ? esc($activite['description']) : 'Pour sculpter votre corps et l\'harmoniser avec votre nouveau régime diététique. Fréquence : 3 Ã  4 séances hebdomadaires.' ?>
                     </p>
                     <?php if(isset($activite) && isset($activite['calories_burned_per_hour'])): ?>
                     <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">

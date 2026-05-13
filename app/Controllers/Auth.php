@@ -24,7 +24,7 @@ class Auth extends BaseController
             }
 
             if ($userModel->where('email', $email)->first()) {
-                session()->setFlashdata('error', 'Un compte avec cet email existe déjà.');
+                session()->setFlashdata('error', 'Un compte avec cet email existe déjà .');
                 return redirect()->back()->withInput();
             }
 
@@ -41,7 +41,7 @@ class Auth extends BaseController
             session()->set('user_id', $id);
             session()->set('user_name', $userData['full_name']);
 
-            return redirect()->to('/profile');
+            return redirect()->to('/');
         }
 
         return view('inscription');
@@ -69,13 +69,13 @@ class Auth extends BaseController
                 return redirect()->back()->withInput();
             }
 
-            $imc = $poids / (($taille/100)*($taille/100));
+            $imc = $poids / (($taille / 100) * ($taille / 100));
 
             $measureModel->insert([
                 'user_id' => $userId,
                 'weight_kg' => $poids,
                 'waist_cm' => null,
-                'notes' => 'IMC: ' . round($imc,1) . ' / Activite: ' . $activite,
+                'notes' => 'IMC: ' . round($imc, 1) . ' / Activite: ' . $activite,
             ]);
 
             session()->setFlashdata('success', 'Données santé enregistrées.');
@@ -102,7 +102,12 @@ class Auth extends BaseController
 
             session()->set('user_id', $user['id']);
             session()->set('user_name', $user['full_name'] ?? $user['email']);
-            return redirect()->to('/profile');
+            session()->set('role', $user['role'] ?? 'user');
+
+            if (isset($user['role']) && $user['role'] === 'admin') {
+                return redirect()->to('/admin');
+            }
+            return redirect()->to('/');
         }
 
         return view('login');
@@ -139,10 +144,39 @@ class Auth extends BaseController
 
         $user = $userModel->find($userId);
         $lastMeasures = $measureModel->where('user_id', $userId)->orderBy('measured_at', 'DESC')->first();
+        
+        // Nombre total de mesures
+        $measureCount = $measureModel->where('user_id', $userId)->countAllResults();
+        
+        // Infos wallet (portefeuille / premium)
+        $walletModel = new \App\Models\WalletModel();
+        $wallet = $walletModel->chargerInfosWallet($userId);
+        if (!is_array($wallet)) {
+            $wallet = ['user_id' => $userId, 'balance' => 0.00, 'is_gold' => 0];
+        }
+        
+        // Compter les abonnements actifs
+        $db = \Config\Database::connect();
+        $subscriptionCount = 0;
+        try {
+            $subscriptionCount = $db->table('user_subscriptions')
+                ->where('user_id', $userId)
+                ->where('status', 'active')
+                ->countAllResults();
+        } catch (\Exception $e) {
+            // Table peut ne pas exister
+        }
+        
+        // Date d'inscription formatée
+        $memberSince = isset($user['created_at']) ? date('d/m/Y', strtotime($user['created_at'])) : '—';
 
         $data = [
             'user' => $user,
             'measures' => $lastMeasures,
+            'measureCount' => $measureCount,
+            'wallet' => $wallet,
+            'subscriptionCount' => $subscriptionCount,
+            'memberSince' => $memberSince,
             'flash' => [
                 'error' => session()->getFlashdata('error'),
                 'success' => session()->getFlashdata('success'),
@@ -150,5 +184,12 @@ class Auth extends BaseController
         ];
 
         return view('profile', $data);
+    }
+
+
+    public function logout()
+    {
+        session()->destroy();
+        return redirect()->to('/');
     }
 }

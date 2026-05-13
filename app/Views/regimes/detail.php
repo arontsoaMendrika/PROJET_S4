@@ -1,4 +1,4 @@
-﻿<?= $this->extend('layouts/elegance') ?>
+<?= $this->extend('layouts/elegance') ?>
 <?= $this->section('content') ?>
 <div class="container mb-5">
 

@@ -1,16 +1,16 @@
 <?php
 // Fonctions pour l'application de régimes - Itokiana ETU004364
 
-// Connexion à la base de données - Utilise la configuration de CodeIgniter
+// Connexion Ã  la base de données - Utilise la configuration de CodeIgniter
 function getDBConnection()
 {
     try {
         // Paramètres de connexion pour XAMPP MySQL
         $host = '127.0.0.1';
-        $port = '8889';
+        $port = '3306';
         $database = 'regime';
         $username = 'root';
-        $password = 'root';
+        $password = '';
         $charset = 'utf8mb4';
 
         // Créer la connexion avec TCP/IP pour XAMPP
@@ -311,11 +311,11 @@ function generateRecommendationText($profile, $bmi, $regime, $score)
     $text = "Ce régime {$regime['type_name']} est recommandé pour votre objectif de {$objectiveText[$profile['objective']]}";
 
     if ($score > 80) {
-        $text .= ". Il correspond parfaitement à votre profil IMC de " . number_format($bmi, 1);
+        $text .= ". Il correspond parfaitement Ã  votre profil IMC de " . number_format($bmi, 1);
     } elseif ($score > 60) {
         $text .= ". Il offre un bon équilibre pour votre métabolisme";
     } else {
-        $text .= ". Il peut être adapté à vos besoins spécifiques";
+        $text .= ". Il peut être adapté Ã  vos besoins spécifiques";
     }
 
     return $text;
@@ -456,7 +456,7 @@ function getInfoPortefeuille($userId)
 }
 
 /**
- * Permet à l'utilisateur de passer en mode GOLD
+ * Permet Ã  l'utilisateur de passer en mode GOLD
  */
 function activerAbonnementGold($userId)
 {
